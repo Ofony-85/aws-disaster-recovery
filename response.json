@@ -1,0 +1,1 @@
+{"statusCode": 200, "body": "{\"timestamp\": \"2025-12-20T21:53:54.856646\", \"primary_bucket\": \"dr-project-primary-477094921093\", \"dr_bucket\": \"dr-project-dr-477094921093\", \"primary_object_count\": 5, \"dr_object_count\": 5, \"replication_enabled\": true, \"issues\": []}"}

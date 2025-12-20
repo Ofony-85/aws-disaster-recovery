@@ -1,0 +1,1 @@
+{"statusCode": 500, "body": "{\"error\": \"An error occurred (InvalidParameterValue) when calling the DescribeDBSnapshots operation: Invalid value 1 for MaxRecords. Must be between 20 and 100.\"}"}

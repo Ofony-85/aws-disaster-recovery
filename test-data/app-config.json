@@ -1,0 +1,14 @@
+{
+  "application": "DisasterRecovery",
+  "version": "1.0.0",
+  "database": {
+    "host": "primary-db",
+    "port": 3306,
+    "name": "drprojectdb"
+  },
+  "backup": {
+    "enabled": true,
+    "frequency": "daily",
+    "retention_days": 7
+  }
+}

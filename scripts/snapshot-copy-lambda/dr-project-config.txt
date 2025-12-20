@@ -1,0 +1,24 @@
+=== Disaster Recovery Project Configuration ===
+
+PRIMARY REGION: us-east-1
+DR REGION: us-west-2
+
+RDS DATABASE:
+- Instance ID: dr-project-primary-db
+- Endpoint: dr-project-primary-db.c4tm2e0s4d3h.us-east-1.rds.amazonaws.com
+- Username: admin
+- Database Name: drprojectdb
+- Engine: MySQL 8.0.44
+- Instance Class: db.t3.micro
+
+LAMBDA FUNCTION:
+- Name: dr-snapshot-copy
+- Runtime: Python 3.11
+- Schedule: Daily at 4 AM UTC
+
+SECURITY GROUP: sg-09d77710077b40408
+
+VPC: vpc-0cb046ea240d974eb
+SUBNETS: subnet-029f4fdfbd71fe2c1, subnet-027411e483f469f65
+
+Created: Fri Dec 19 23:39:38 WAT 2025

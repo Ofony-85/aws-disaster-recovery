@@ -1,0 +1,28 @@
+{
+  "Role": "arn:aws:iam::477094921093:role/DR-S3-Replication-Role",
+  "Rules": [
+    {
+      "Status": "Enabled",
+      "Priority": 1,
+      "DeleteMarkerReplication": {
+        "Status": "Enabled"
+      },
+      "Filter": {},
+      "Destination": {
+        "Bucket": "arn:aws:s3:::dr-project-dr-477094921093",
+        "ReplicationTime": {
+          "Status": "Enabled",
+          "Time": {
+            "Minutes": 15
+          }
+        },
+        "Metrics": {
+          "Status": "Enabled",
+          "EventThreshold": {
+            "Minutes": 15
+          }
+        }
+      }
+    }
+  ]
+}

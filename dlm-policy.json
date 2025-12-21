@@ -1,0 +1,57 @@
+{
+  "ExecutionRoleArn": "arn:aws:iam::477094921093:role/DR-DLM-Lifecycle-Role",
+  "Description": "Daily AMI backups with 7-day retention and cross-region copy",
+  "State": "ENABLED",
+  "PolicyDetails": {
+    "PolicyType": "IMAGE_MANAGEMENT",
+    "ResourceTypes": [
+      "INSTANCE"
+    ],
+    "TargetTags": [
+      {
+        "Key": "Backup",
+        "Value": "daily"
+      }
+    ],
+    "Schedules": [
+      {
+        "Name": "DailyAMIBackup",
+        "CopyTags": true,
+        "TagsToAdd": [
+          {
+            "Key": "CreatedBy",
+            "Value": "DLM"
+          },
+          {
+            "Key": "Type",
+            "Value": "AutomatedBackup"
+          }
+        ],
+        "CreateRule": {
+          "Interval": 24,
+          "IntervalUnit": "HOURS",
+          "Times": [
+            "03:00"
+          ]
+        },
+        "RetainRule": {
+          "Count": 7
+        },
+        "CrossRegionCopyRules": [
+          {
+            "TargetRegion": "us-west-2",
+            "Encrypted": true,
+            "CopyTags": true,            "RetainRule": {
+              "Interval": 7,
+              "IntervalUnit": "DAYS"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "Tags": {
+    "Project": "DisasterRecovery",
+    "ManagedBy": "DLM"
+  }
+}

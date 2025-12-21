@@ -1,0 +1,21 @@
+=== Day 4: EC2 AMI Automation Complete ===
+
+EC2 INSTANCE: i-019049f3a0e1ce7fa
+DLM POLICY ID: policy-0428c71bcda0599e1
+
+DLM CONFIGURATION:
+✅ Daily AMI backups at 3:00 AM UTC
+✅ 7-day retention in primary region
+✅ Cross-region copy to us-west-2
+✅ 7-day retention in DR region
+✅ Automated cleanup after retention period
+✅ Fast restore enabled (1 day)
+
+MANUAL BACKUP:
+Primary AMI: ami-032d50e6584727324
+DR AMI: ami-0ede8396e3135a2eb
+
+MONITORING:
+Note: AMI monitoring integrated with master monitor (Day 5)
+
+Created: Sun Dec 21 22:44:44 WAT 2025

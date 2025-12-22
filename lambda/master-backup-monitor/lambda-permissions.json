@@ -1,0 +1,61 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "logs:CreateLogGroup",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+      ],
+      "Resource": "arn:aws:logs:*:*:*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "rds:DescribeDBInstances",
+        "rds:DescribeDBSnapshots"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "s3:GetBucketReplication",
+        "s3:GetBucketVersioning",
+        "s3:ListBucket"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ec2:DescribeImages",
+        "ec2:DescribeInstances"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "dlm:GetLifecyclePolicy",
+        "dlm:GetLifecyclePolicies"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "cloudwatch:PutMetricData"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "sns:Publish"
+      ],
+      "Resource": "*"
+    }
+  ]
+}

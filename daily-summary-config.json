@@ -1,0 +1,10 @@
+{
+  "config": {
+    "db_instance_id": "dr-project-primary-db",
+    "instance_id": "i-019049f3a0e1ce7fa",
+    "primary_bucket": "dr-project-primary-477094921093",
+    "dr_bucket": "dr-project-dr-477094921093",
+    "sns_topic_arn": ""
+  },
+  "send_summary": true
+}

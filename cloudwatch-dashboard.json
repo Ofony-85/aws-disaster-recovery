@@ -1,0 +1,62 @@
+{
+  "widgets": [
+    {
+      "type": "metric",
+      "x": 0,
+      "y": 0,
+      "width": 12,
+      "height": 6,
+      "properties": {
+        "metrics": [
+          ["DisasterRecovery/Backups", "RDSPrimarySnapshots", { "label": "Primary Snapshots" }],
+          [".", "RDSDRSnapshots", { "label": "DR Snapshots" }]
+        ],
+        "view": "timeSeries",
+        "stacked": false,
+        "region": "us-east-1",
+        "title": "RDS Snapshot Count",
+        "period": 21600,
+        "stat": "Average"
+      }
+    },
+    {
+      "type": "metric",
+      "x": 12,
+      "y": 0,
+      "width": 12,
+      "height": 6,
+      "properties": {
+        "metrics": [
+          ["DisasterRecovery/Backups", "BackupHealthScore", { "label": "Backup Health Score (%)" }]
+        ],
+        "view": "timeSeries",
+        "stacked": false,
+        "region": "us-east-1",
+        "title": "Overall Backup Health Score",
+        "period": 21600,
+        "stat": "Average",
+        "yAxis": {
+          "left": { "min": 0, "max": 100 }
+        }
+      }
+    },
+    {
+      "type": "metric",
+      "x": 0,
+      "y": 6,
+      "width": 12,
+      "height": 6,
+      "properties": {
+        "metrics": [
+          ["DisasterRecovery/Backups", "S3ReplicationDifference", { "label": "S3 Replication Lag" }]
+        ],
+        "view": "timeSeries",
+        "stacked": false,
+        "region": "us-east-1",
+        "title": "S3 Replication Difference",
+        "period": 21600,
+        "stat": "Maximum"
+      }
+    }
+  ]
+}

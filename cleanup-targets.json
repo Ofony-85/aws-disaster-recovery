@@ -1,0 +1,7 @@
+[
+  {
+    "Id": "1",
+    "Arn": "arn:aws:lambda:us-east-1:477094921093:function:dr-test-cleanup",
+    "Input": "{\"sns_topic_arn\":\"\",\"max_age_hours\":24}"
+  }
+]

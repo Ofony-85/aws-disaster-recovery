@@ -1,0 +1,7 @@
+{
+  "config": {
+    "source_db_id": "dr-project-primary-db",
+    "test_region": "us-west-2",
+    "sns_topic_arn": ""
+  }
+}
